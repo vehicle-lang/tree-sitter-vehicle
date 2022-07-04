@@ -1,0 +1,29 @@
+{
+  "name": "tree-sitter-vehicle",
+  "version": "1.0.0",
+  "description": "Vehicle grammar for tree-sitter",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vehicle-lang/tree-sitter-vehicle.git"
+  },
+  "keywords": [
+    "parser",
+    "lexer"
+  ],
+  "author": "Wen Kokke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vehicle-lang/tree-sitter-vehicle/issues"
+  },
+  "homepage": "https://github.com/vehicle-lang/tree-sitter-vehicle#readme",
+  "dependencies": {
+    "nan": "^2.16.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.6"
+  }
+}
