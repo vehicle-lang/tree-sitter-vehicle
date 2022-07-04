@@ -1,6 +1,6 @@
 [package]
 name = "tree-sitter-vehicle"
-description = "vehicle grammar for the tree-sitter parsing library"
+description = "Vehicle grammar for the tree-sitter parsing library"
 version = "0.0.1"
 keywords = ["incremental", "parsing", "vehicle"]
 categories = ["parsing", "text-editors"]
