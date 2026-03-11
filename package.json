@@ -1,30 +1,58 @@
 {
   "name": "tree-sitter-vehicle",
-  "version": "1.0.0",
-  "description": "Vehicle grammar for the tree-sitter parsing library",
-  "main": "bindings/node",
-  "scripts": {
-    "build": "tree-sitter generate",
-    "test": "tree-sitter test"
-  },
+  "version": "0.1.0",
+  "description": "A tree sitter implementation for the vehicle specification language",
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vehicle-lang/tree-sitter-vehicle.git"
+    "url": "git+github.com/vehicle-lang/vehicle.git"
   },
-  "keywords": [
-    "parser",
-    "lexer"
-  ],
-  "author": "Wen Kokke",
+  "funding": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vehicle-lang/tree-sitter-vehicle/issues"
+  "author": {
+    "name": "Alistair Sirman",
+    "email": "as9g21@soton.ac.uk",
+    "url": ""
   },
-  "homepage": "https://github.com/vehicle-lang/tree-sitter-vehicle#readme",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "incremental",
+    "parsing",
+    "tree-sitter",
+    "vehicle"
+  ],
+  "files": [
+    "grammar.js",
+    "tree-sitter.json",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**",
+    "*.wasm"
+  ],
   "dependencies": {
-    "nan": "^2.16.0"
+    "node-addon-api": "^8.5.0",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.6"
+    "prebuildify": "^6.0.1",
+    "tree-sitter": "^0.25.0",
+    "tree-sitter-cli": "^0.26.5"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.25.0"
+  },
+  "peerDependenciesMeta": {
+    "tree-sitter": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
   }
 }
